@@ -33,14 +33,15 @@ public class LethalWeapon {
     }
 
     public LethalWeapon() {
-        this("Black", 1.0, 10);
+        serial = nextSerial;
+        nextSerial++;
     }
 
     public LethalWeapon(String color,Double power, int roundsLeft) {
+        this();
         this.color = color;
         this.roundsLeft = roundsLeft;
         this.power = power;
-        serial = 2L;
     }
 
     @Override
